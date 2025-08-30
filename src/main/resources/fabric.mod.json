@@ -3,15 +3,22 @@
 	"id": "fix-jungle-saplings",
 	"version": "${version}",
 	"name": "Fix Jungle Saplings",
-	"description": "Fixes Jungle Saplings drop rate to match other trees.",
+	"description": "Fixes Jungle Saplings drop rates to match other trees.",
 	"authors": [
-		"Ferdinand Keller <ferdinand.keller@proton.me>"
+      {
+        "name":  "Ferdinand Keller",
+        "contact": {
+          "email": "ferdinand.keller@proton.me",
+          "homepage": "https://ferdinandkeller.dev"
+        }
+      }
 	],
 	"contact": {
-		"homepage": "https://ferdinandkeller.dev",
-		"sources": "https://github.com/ferdinandkeller/fix-jungle-saplings"
+		"homepage": "https://github.com/ferdinandkeller/fix-jungle-saplings",
+		"sources": "https://github.com/ferdinandkeller/fix-jungle-saplings",
+        "issues": "https://github.com/ferdinandkeller/fix-jungle-saplings/issues"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/fix-jungle-saplings/icon.png",
 	"environment": "*",
 	"entrypoints": {
