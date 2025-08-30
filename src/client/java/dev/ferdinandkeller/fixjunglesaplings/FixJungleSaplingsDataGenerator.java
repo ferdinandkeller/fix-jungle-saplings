@@ -32,7 +32,7 @@ class FixJungleSaplingsBlockLootTableProvider extends FabricBlockLootTableProvid
             leavesDrops(
                 Blocks.JUNGLE_LEAVES,
                 Blocks.JUNGLE_SAPLING,
-  0.025f, 0.027777778f, 0.03125f, 0.041666668f, 0.1f
+                0.05f, 0.0625f, 0.083333336f, 0.1f
             )
         );
     }
