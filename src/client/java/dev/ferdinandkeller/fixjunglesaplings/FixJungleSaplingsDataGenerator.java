@@ -2,10 +2,38 @@ package dev.ferdinandkeller.fixjunglesaplings;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.minecraft.block.Blocks;
+import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.resource.featuretoggle.FeatureFlags;
+
+import java.util.Collections;
+import java.util.concurrent.CompletableFuture;
 
 public class FixJungleSaplingsDataGenerator implements DataGeneratorEntrypoint {
 	@Override
 	public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
+        FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 
+        pack.addProvider(FixJungleSaplingsBlockLootTableProvider::new);
 	}
+}
+
+class FixJungleSaplingsBlockLootTableProvider extends FabricBlockLootTableProvider {
+    protected FixJungleSaplingsBlockLootTableProvider(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
+        super(dataOutput, registryLookup);
+    }
+
+    @Override
+    public void generate() {
+        addDrop(
+            Blocks.JUNGLE_LEAVES,
+            leavesDrops(
+                Blocks.JUNGLE_LEAVES,
+                Blocks.JUNGLE_SAPLING,
+  0.025f, 0.027777778f, 0.03125f, 0.041666668f, 0.1f
+            )
+        );
+    }
 }
