@@ -3,13 +3,13 @@
 	"id": "fix-jungle-saplings",
 	"version": "${version}",
 	"name": "Fix Jungle Saplings",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Fixes Jungle Saplings drop rate to match other trees.",
 	"authors": [
-		"Me!"
+		"Ferdinand Keller <ferdinand.keller@proton.me>"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://ferdinandkeller.dev",
+		"sources": "https://github.com/ferdinandkeller/fix-jungle-saplings"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/fix-jungle-saplings/icon.png",
@@ -25,13 +25,6 @@
 			"dev.ferdinandkeller.fixjunglesaplings.FixJungleSaplingsDataGenerator"
 		]
 	},
-	"mixins": [
-		"fix-jungle-saplings.mixins.json",
-		{
-			"config": "fix-jungle-saplings.client.mixins.json",
-			"environment": "client"
-		}
-	],
 	"depends": {
 		"fabricloader": ">=0.17.2",
 		"minecraft": "~1.21.8",
