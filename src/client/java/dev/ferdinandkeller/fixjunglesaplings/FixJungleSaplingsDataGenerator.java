@@ -21,8 +21,8 @@ public class FixJungleSaplingsDataGenerator implements DataGeneratorEntrypoint {
 }
 
 class FixJungleSaplingsBlockLootTableProvider extends FabricBlockLootTableProvider {
-    protected FixJungleSaplingsBlockLootTableProvider(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
-        super(dataOutput, registryLookup);
+    protected FixJungleSaplingsBlockLootTableProvider(FabricDataOutput dataOutput) {
+        super(dataOutput);
     }
 
     @Override
